@@ -136,4 +136,33 @@ function copyNumber(id) {
 
 
 
-      
+
+function addCallHistory(name, number) {
+  const data = {
+    name: name,
+    number: number,
+    date: new Date().toLocaleTimeString()
+  };
+
+  historyData.push(data);
+
+  const container = document.getElementById("history-container");
+  const div = document.createElement("div");
+  div.innerHTML = `
+    <div class="flex justify-between items-center bg-[#FAFAFA] p-2 rounded mb-2">
+      <div>
+        <h3 class="font-bold">${data.name}</h3>
+        <p>${data.number}</p>
+      </div>
+      <p class="text-sm text-gray-500">${data.date}</p>
+    </div>
+  `;
+  container.appendChild(div);
+}
+
+document.getElementById("call-btn1").addEventListener("click",function(){ addCallHistory("National Emergency Number", "999")});
+document.getElementById("call-btn2").addEventListener("click",function(){ addCallHistory("Police Helpline Number", "999")});
+document.getElementById("call-btn3").addEventListener("click",function(){ addCallHistory("Fire Service Number", "999")});
+document.getElementById("call-btn4").addEventListener("click",function(){ addCallHistory("Ambulance Service", "1994-999999999")});
+document.getElementById("call-btn5").addEventListener("click",function(){ addCallHistory("Women & Child Helpline", "109")});
+document.getElementById("call-btn6").addEventListener("click",function(){ addCallHistory("Anti-Corruption Helpline", "106")});
