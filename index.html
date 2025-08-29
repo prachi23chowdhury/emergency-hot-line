@@ -55,7 +55,7 @@
             <p class="text-xs text-gray-400 pl-1">All</p>
         </div>
         <div class="flex gap-8 mt-3">
-            <button id="copy-btn1" class="btn w-20 h-6 text-sm text-gray-400 "><i class="fa-regular fa-copy"></i>Copy</button>
+            <button id="copy-btn1" class="btn w-20 h-6 text-sm text-gray-400" onclick="copyNumber('num1')"><i class="fa-regular fa-copy"></i>Copy</button>
             <button id="call-btn1" class="call btn w-20 h-6 text-sm text-white bg-[#00A63E]" data-index="1"><i class="fa-solid fa-phone"></i>Call</button>
             
 
@@ -77,7 +77,7 @@
             <p class="text-xs text-gray-400 pl-1">Police</p>
         </div>
         <div class="flex gap-8 mt-3">
-            <button id="copy-btn2" class=" btn w-20 h-6 text-sm text-gray-400 " ><i class="fa-regular fa-copy"></i>Copy</button>
+            <button id="copy-btn2" class=" btn w-20 h-6 text-sm text-gray-400" onclick="copyNumber('num2')" ><i class="fa-regular fa-copy"></i>Copy</button>
             <button id="call-btn2" class=" call btn w-20 h-6 text-sm text-white bg-[#00A63E]" data-index="2"><i class="fa-solid fa-phone"></i>Call</button>
        
 
@@ -99,7 +99,7 @@
             <p class="text-xs text-gray-400 pl-1">Fire</p>
         </div>
         <div class="flex gap-8 mt-3">
-            <button id="copy-btn3" class="btn w-20 h-6 text-sm text-gray-300 "><i class="fa-regular fa-copy"></i>Copy</button>
+            <button id="copy-btn3" class="btn w-20 h-6 text-sm text-gray-300 " onclick="copyNumber('num3')"><i class="fa-regular fa-copy"></i>Copy</button>
             <button id="call-btn3" class="call btn w-20 h-6 text-sm text-white bg-[#00A63E]" data-index="3"><i class="fa-solid fa-phone"></i>Call</button>
        
 
@@ -121,7 +121,7 @@
             <p class="text-xs text-gray-400 pl-1">Health</p>
         </div>
         <div class="flex gap-8 mt-3">
-            <button id="copy-btn4" class="btn w-20 h-6 text-sm text-gray-400 "><i class="fa-regular fa-copy"></i>Copy</button>
+            <button id="copy-btn4" class="btn w-20 h-6 text-sm text-gray-400 " onclick="copyNumber('num4')"><i class="fa-regular fa-copy"></i>Copy</button>
             <button id="call-btn4" class="call btn w-20 h-6 text-sm text-white bg-[#00A63E]" data-index="4"><i class="fa-solid fa-phone"></i>Call</button>
        
 
@@ -143,7 +143,7 @@
             <p class="text-xs text-gray-400 pl-1">Help</p>
         </div>
         <div class="flex gap-8 mt-3">
-            <button id="copy-btn5" class="btn w-20 h-6 text-sm text-gray-400 "><i class="fa-regular fa-copy"></i>Copy</button>
+            <button id="copy-btn5" class="btn w-20 h-6 text-sm text-gray-400 " onclick="copyNumber('num5')"><i class="fa-regular fa-copy"></i>Copy</button>
             <button id="call-btn5" class="call btn w-20 h-6 text-sm text-white bg-[#00A63E]" data-index="5"><i class="fa-solid fa-phone"></i>Call</button>
        
 
@@ -165,7 +165,7 @@
             <p class="text-xs text-gray-400 pl-1">Govt.</p>
         </div>
         <div class="flex gap-8 mt-3">
-            <button id="copy-btn6" class="btn w-20 h-6 text-sm text-gray-400 "><i class="fa-regular fa-copy"></i>Copy</button>
+            <button id="copy-btn6" class="btn w-20 h-6 text-sm text-gray-400 " onclick="copyNumber('num6')"><i class="fa-regular fa-copy"></i>Copy</button>
             <button id="call-btn6" class="call btn w-20 h-6 text-sm text-white bg-[#00A63E]" data-index="6"><i class="fa-solid fa-phone"></i>Call</button>
        
 
@@ -175,21 +175,24 @@
      </div>
 
 <!-- call history -->
-<div>
+<div id="call-history-parent">
         <div class="flex items-center justify-between">
             <h1 class="font-bold">Call history</h1>
-            <button class="btn rounded-4xl bg-[#00A63E]"><i class="fa-regular fa-clock"></i>Clear</button>
+            <button id="clear-btn" class="btn rounded-4xl bg-[#00A63E]"><i class="fa-regular fa-clock"></i>Clear</button>
         </div>
-        
-         <div class="history-container border-2 border-amber-500 mt-3 rounded-xl">
-            <div class="flex justify-between items-center bg-[#FAFAFA]">
+       
+             <div id="history-container" class="mt-3 rounded-xl">
+           <div id="call-history">
+             <div class="flex justify-between items-center bg-[#FAFAFA]">
                 <div>
                     <h3>Fire Service Number</h3>
                     <p>999</p>
                 </div>
                 <p>11:36:58 AM</p>
             </div>
+           </div>
             </div>
+        
 </div>
 <script src="script.js"></script>
 </body>

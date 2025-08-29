@@ -81,7 +81,7 @@ const callButtons = document.getElementsByClassName('call')
       const p = document.getElementById('p' +index).innerText;
       const num = document.getElementById('num' +index).innerText;
 
-      alert("📞" + p +" " + num)
+      alert( "📞 " + "Calling"+" "+ p + " " + num)
     })
   }
 
@@ -96,7 +96,7 @@ function heartCount(id){
 function cutCoin(id) {
     if (balance < 20) {
       alert("❌ You don’t have enough coins. To make a call, you need at least 20 coins.");
-      return; // Stop the function if not enough balance
+      return; 
     }
 
     balance -= 20;
@@ -107,9 +107,32 @@ function copyCounts(id){
     document.getElementById('copy-count').innerText = copyCount;
 }
 
+// clearBtn work
 
+const clearBtn = document.getElementById("clear-btn");
+const callHistory = document.getElementById("call-history");
 
+clearBtn.addEventListener("click", function() {
   
+  callHistory.innerHTML = "";
+});
+
+
+// 
+function copyNumber(id) {
+    const numText = document.getElementById(id).innerText;
+
+    const tempInput = document.createElement("textarea");
+    tempInput.value = numText;
+    document.body.appendChild(tempInput);
+
+    tempInput.select();
+    document.execCommand("copy");
+
+    document.body.removeChild(tempInput);
+}
+
+
 
 
 
