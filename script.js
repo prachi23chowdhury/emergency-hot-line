@@ -118,7 +118,7 @@ clearBtn.addEventListener("click", function() {
 });
 
 
-// 
+// copyBtn text
 function copyNumber(id) {
     const numText = document.getElementById(id).innerText;
 
