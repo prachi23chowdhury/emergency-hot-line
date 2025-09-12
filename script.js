@@ -128,8 +128,14 @@ function copyNumber(id) {
 
     tempInput.select();
     document.execCommand("copy");
-
+    
     document.body.removeChild(tempInput);
+  
+}
+
+function copyNumber(id) {
+  const numText = document.getElementById(id).innerText;
+  alert("Copied: " + numText); 
 }
 
 
